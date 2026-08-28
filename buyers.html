@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Buyers & Markets — Krishi Mitra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<!-- ============ SCREEN 7: BUYERS ============ -->
+<div class="screen active" id="screen-buyers">
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='home.html'">←</button>
+    <span class="header-title" data-i18n="buyers_title">🤝 Buyers & Markets</span>
+    <button class="lang-toggle-small" onclick="toggleLang()">EN</button>
+  </div>
+
+  <div class="buyers-filter">
+    <button class="filter-chip active" onclick="filterBuyers(this, 'all')" data-i18n="all">All</button>
+    <button class="filter-chip" onclick="filterBuyers(this, 'market')" data-i18n="markets">Markets</button>
+    <button class="filter-chip" onclick="filterBuyers(this, 'company')" data-i18n="companies">Companies</button>
+    <button class="filter-chip" onclick="filterBuyers(this, 'trader')" data-i18n="traders">Traders</button>
+  </div>
+
+  <div class="buyers-list" id="buyers-list">
+    <!-- Dynamically populated -->
+  </div>
+</div>
+
+<!-- ============ BOTTOM NAVIGATION ============ -->
+<nav class="bottom-nav" id="bottom-nav">
+  <a class="nav-item" href="home.html" data-nav="home">
+    <span class="nav-icon">🏠</span>
+    <span class="nav-label" data-i18n="nav_home">Home</span>
+  </a>
+  <a class="nav-item" href="crops.html" data-nav="crops">
+    <span class="nav-icon">🌾</span>
+    <span class="nav-label" data-i18n="nav_crops">Crops</span>
+  </a>
+  <a class="nav-item" href="market.html" data-nav="market">
+    <span class="nav-icon">📈</span>
+    <span class="nav-label" data-i18n="nav_market">Market</span>
+  </a>
+  <a class="nav-item" href="ai-help.html" data-nav="ai">
+    <span class="nav-icon">🤖</span>
+    <span class="nav-label" data-i18n="nav_ai">AI Help</span>
+  </a>
+  <a class="nav-item" href="profile.html" data-nav="profile">
+    <span class="nav-icon">👤</span>
+    <span class="nav-label" data-i18n="nav_profile">Profile</span>
+  </a>
+</nav>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/buyers.js"></script>
+</body>
+</html>
